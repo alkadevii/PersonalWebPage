@@ -15,9 +15,20 @@
       crossorigin="anonymous"
     />
     <style>
-        .card-img-top{
-            height: 200px;
-        }
+      nav {
+        background-color: rgb(247, 246, 246);
+      }
+      body {
+        background-color: rgb(245, 228, 231);
+      }
+      .card{
+        border-radius: 20px;
+        
+      }
+      .card-img-top {
+        height: 200px;
+        padding: 20px;
+      }
       .card-text {
         overflow: scroll;
         height: 250px;
@@ -25,25 +36,51 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header>
+      <div class="collapse " id="collapseContent">
+        <div class="col-6" style="padding-left: 300px">
+          <h4 class="text-white">Contact</h4>
+          <a href="#" style="text-decoration: none; color: white"
+            >Follow on Twitter</a
+          ><br />
+          <a href="#" style="text-decoration: none; color: white"
+            >Like on Facebook</a
+          ><br />
+          <a href="#" style="text-decoration: none; color: white">Email Me</a>
+        </div>
+      </div>
+      </div>
+    </header>
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">My Name</a>
+        <a class="navbar-brand" href="#">ALKA DEVI</a>
         <div id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <button class="btn">
+                <a class="nav-link" href="#about">About</a>
+              </button>
+              
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
+              <button class="btn">
+                <a class="nav-link" href="#projects">Projects</a>
+              </button>
+              
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <button class="btn"  data-bs-toggle="collapse"
+              data-bs-target="#collapseContent"
+              aria-expanded="false"
+              aria-controls="collapseContent">
+                <a class="nav-link" href="#contact">Contact</a>
+              </button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <section id="about" class="container mt-5 row">
+    <section id="about" class="container mt-5 row about">
       <div class="col-md-4">
         <img src="images/profile.JPG" width="300px" />
       </div>
@@ -59,9 +96,9 @@
         </p>
       </div>
     </section>
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="row">
+    <section id="projects" class="container project">
+      <h2 class="text-center p-2">Projects</h2>
+      <div class="row container">
         <div class="col-md-4 mb-4">
           <div class="card">
             <div
@@ -157,110 +194,196 @@
           </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card">
-                <div
-                    id="ecommerceCarousel"
-                    class="card-img-top carousel slide"
-                    data-bs-ride="carousel"
-                >
-                    <!-- Carousel indicators -->
-                    <div class="carousel-indicators">
-                        <button
-                            type="button"
-                            data-bs-target="#ecommerceCarousel"
-                            data-bs-slide-to="0"
-                            class="active"
-                            aria-current="true"
-                            aria-label="Slide 1"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#ecommerceCarousel"
-                            data-bs-slide-to="1"
-                            aria-label="Slide 2"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-slide-to="2"
-                            data-bs-target="#ecommerceCarousel"
-                            aria-label="Slide 3"
-                        ></button>
-                    </div>
-        
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img
-                                src="images/ecommerce1.png"
-                                class="d-block w-100"
-                                alt="Project Image 1"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="images/ecommerce2.png"
-                                class="d-block w-100"
-                                alt="Project Image 2"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="images/ecommerce3.png"
-                                class="d-block w-100"
-                                alt="Project Image 3"
-                            />
-                        </div>
-                    </div>
-        
-                    <!-- Carousel controls -->
-                    <button
-                        class="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#ecommerceCarousel"
-                        data-bs-slide="prev"
-                    >
-                        <span
-                            class="carousel-control-prev-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        class="carousel-control-next"
-                        type="button"
-                        data-bs-target="#ecommerceCarousel"
-                        data-bs-slide="next"
-                    >
-                        <span
-                            class="carousel-control-next-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-        
-                <div class="card-body">
-                    <h5 class="card-title">E-Commerce Website (React)</h5>
-                    <p class="card-text">
-                        I developed an e-commerce application using React and Commerce.js that includes features such as a product list, the ability to add items to the cart, and specific product details. Users can browse through a list of products and view specific details for each item, including images, descriptions, and prices. They can also add items to their cart for purchase and proceed to checkout. By utilizing the Commerce.js SDK, I was able to seamlessly integrate cart management and checkout processes, making the application user-friendly and efficient. This project demonstrates my skills in React development and familiarity with e-commerce tools and frameworks.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
           <div class="card">
-            <img
-              src="project-image.jpg"
-              class="card-img-top"
-              alt="Project Image"
-            />
+            <div
+              id="ecommerceCarousel"
+              class="card-img-top carousel slide"
+              data-bs-ride="carousel"
+            >
+              <!-- Carousel indicators -->
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#ecommerceCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#ecommerceCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-slide-to="2"
+                  data-bs-target="#ecommerceCarousel"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="images/ecommerce1.png"
+                    class="d-block w-100"
+                    alt="Project Image 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="images/ecommerce2.png"
+                    class="d-block w-100"
+                    alt="Project Image 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="images/ecommerce3.png"
+                    class="d-block w-100"
+                    alt="Project Image 3"
+                  />
+                </div>
+              </div>
+
+              <!-- Carousel controls -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#ecommerceCarousel"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#ecommerceCarousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
             <div class="card-body">
-              <h5 class="card-title">Project Title</h5>
-              <p class="card-text">Short description of the project.</p>
+              <h5 class="card-title">E-Commerce Website (React)</h5>
+              <p class="card-text">
+                I developed an e-commerce application using React and
+                Commerce.js that includes features such as a product list, the
+                ability to add items to the cart, and specific product details.
+                Users can browse through a list of products and view specific
+                details for each item, including images, descriptions, and
+                prices. They can also add items to their cart for purchase and
+                proceed to checkout. By utilizing the Commerce.js SDK, I was
+                able to seamlessly integrate cart management and checkout
+                processes, making the application user-friendly and efficient.
+                This project demonstrates my skills in React development and
+                familiarity with e-commerce tools and frameworks.
+              </p>
             </div>
           </div>
         </div>
-        
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div
+              id="albumCarousel"
+              class="card-img-top carousel slide"
+              data-bs-ride="carousel"
+            >
+              <!-- Carousel indicators -->
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#albumCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#albumCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-slide-to="2"
+                  data-bs-target="#albumCarousel"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="images/album1.png"
+                    class="d-block w-100"
+                    alt="Project Image 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="images/album2.png"
+                    class="d-block w-100"
+                    alt="Project Image 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="images/album3.png"
+                    class="d-block w-100"
+                    alt="Project Image 3"
+                  />
+                </div>
+              </div>
+
+              <!-- Carousel controls -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#albumCarousel"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#albumCarousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Album Example (Bootsrap)</h5>
+              <p class="card-text">
+                
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
